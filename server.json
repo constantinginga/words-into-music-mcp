@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.constantinginga/words-into-music",
+  "title": "Words into Music",
+  "description": "Create songs from prompts or lyrics, check credits, and access your private library with OAuth.",
+  "version": "0.1.0",
+  "websiteUrl": "https://wordsintomusic.com/mcp/",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.wordsintomusic.com/mcp"
+    }
+  ]
+}
