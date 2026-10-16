@@ -1,0 +1,11 @@
+{
+  "name": "words-into-music",
+  "version": "0.1.0",
+  "description": "Generate songs from prompts or lyrics with your Words into Music account.",
+  "mcpServers": {
+    "words-into-music": {
+      "httpUrl": "https://mcp.wordsintomusic.com/mcp",
+      "timeout": 30000
+    }
+  }
+}

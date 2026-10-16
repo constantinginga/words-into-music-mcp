@@ -18,6 +18,14 @@ For clients that read `mcp.json`, use the configuration in this repository. Comp
 
 ChatGPT and Claude have completed real production song-generation tests. Other clients need their own acceptance test. The Grok guide describes its documented route; a Grok end-to-end test is pending.
 
+## Gemini CLI
+
+```sh
+gemini extensions install https://github.com/constantinginga/words-into-music-mcp
+```
+
+In Gemini CLI, run `/mcp auth words-into-music` and complete OAuth sign-in. Then check `/mcp` for the available tools. The extension manifest and installation have been validated with Gemini CLI 0.40.1. Authenticated Gemini song generation has not completed an acceptance test yet.
+
 ## Tools
 
 | Tool | Purpose | Song credits |
