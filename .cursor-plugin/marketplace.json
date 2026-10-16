@@ -1,0 +1,12 @@
+{
+  "name": "words-into-music",
+  "owner": {
+    "name": "Words into Music"
+  },
+  "plugins": [
+    {
+      "name": "words-into-music",
+      "source": "."
+    }
+  ]
+}

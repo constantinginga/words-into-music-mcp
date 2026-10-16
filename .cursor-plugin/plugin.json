@@ -1,0 +1,20 @@
+{
+  "name": "words-into-music",
+  "version": "0.1.0",
+  "description": "Generate songs from prompts or lyrics, check credits, and access your private song library through OAuth.",
+  "author": {
+    "name": "Words into Music",
+    "email": "contact@wordsintomusic.com"
+  },
+  "homepage": "https://wordsintomusic.com/mcp/",
+  "repository": "https://github.com/constantinginga/words-into-music-mcp",
+  "license": "MIT",
+  "keywords": [
+    "music",
+    "audio",
+    "songwriting",
+    "mcp"
+  ],
+  "logo": "logo.png",
+  "mcpServers": "mcp.json"
+}
