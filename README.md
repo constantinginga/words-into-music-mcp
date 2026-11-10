@@ -12,7 +12,7 @@ Use a client that supports remote Streamable HTTP MCP servers with OAuth.
 https://mcp.wordsintomusic.com/mcp
 ```
 
-For clients that read `mcp.json`, use the configuration in this repository. Complete OAuth sign-in in your browser. Never paste your password, session cookie, or a provider API key into a chat. No local package installation is needed.
+For clients that read `mcp.json`, use the configuration in this repository (Agent Plugins format; most clients only need the `url`). Complete OAuth sign-in in your browser. Never paste your password, session cookie, or a provider API key into a chat. No local package installation is needed.
 
 [Setup guide](https://wordsintomusic.com/blog/mcp-setup-guide/) · [ChatGPT](https://wordsintomusic.com/make-songs-in-chatgpt/) · [Claude](https://wordsintomusic.com/make-songs-in-claude/) · [Grok](https://wordsintomusic.com/make-songs-in-grok/)
 
@@ -25,6 +25,16 @@ gemini extensions install https://github.com/constantinginga/words-into-music-mc
 ```
 
 In Gemini CLI, run `/mcp auth words-into-music` and complete OAuth sign-in. Then check `/mcp` for the available tools. The extension manifest and installation have been validated with Gemini CLI 0.40.1. Authenticated Gemini song generation has not completed an acceptance test yet.
+
+## Agent skill
+
+[`skills/words-into-music`](skills/words-into-music/SKILL.md) teaches an agent the safe flow: check credits, prepare the brief, confirm the one-credit cost, start, poll every 15 seconds and return the private song link. Install it with:
+
+```sh
+npx skills add constantinginga/words-into-music-mcp
+```
+
+The repository is also a portable agent plugin (`plugin.json`, `mcp.json`, `skills/`). In Hermes Agent, install it with `hermes plugins install words-into-music` and complete the OAuth sign-in it starts.
 
 ## Tools
 

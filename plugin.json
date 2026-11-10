@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "words-into-music",
+  "version": "1.0.0",
+  "description": "Create original songs from an idea or your own lyrics, track generation and browse your private library through the Words into Music MCP server.",
+  "author": { "name": "Words into Music", "email": "contact@wordsintomusic.com", "url": "https://wordsintomusic.com/" },
+  "homepage": "https://wordsintomusic.com/mcp/",
+  "repository": "https://github.com/constantinginga/words-into-music-mcp",
+  "license": "MIT",
+  "keywords": ["music", "songwriting", "song-generator", "lyrics", "mcp"]
+}

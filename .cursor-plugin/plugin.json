@@ -16,5 +16,9 @@
     "mcp"
   ],
   "logo": "logo.png",
-  "mcpServers": "mcp.json"
+  "mcpServers": {
+    "words-into-music": {
+      "url": "https://mcp.wordsintomusic.com/mcp"
+    }
+  }
 }
