@@ -36,26 +36,45 @@ npx skills add constantinginga/words-into-music-mcp
 
 The repository is also a portable agent plugin (`plugin.json`, `mcp.json`, `skills/`). In Hermes Agent, install it with `hermes plugins install words-into-music` and complete the OAuth sign-in it starts.
 
+## What you can do
+
+- Write and create a song from an idea, or have your own lyrics sung, in any of 11 languages
+- Choose the style, mood, instruments and vocals, or make an instrumental from 60 to 180 seconds long
+- Check your song credits before you start
+- Follow a song while it generates and get the link to the finished song
+- Find songs in your private library and read their lyrics
+- Write lyrics, song titles or band and stage names with the free writing tools, which don't use song credits
+
+Example requests:
+
+- "Write an upbeat birthday song for my sister Ana in Spanish, acoustic pop with warm vocals."
+- "Turn these lyrics into a slow piano ballad: ..."
+- "Make a 60-second lo-fi instrumental for studying."
+- "How many song credits do I have left?"
+- "Show my last five songs."
+
 ## Tools
 
 | Tool | Purpose | Song credits |
 | --- | --- | --- |
 | `get_account_usage` | Check available and reserved credits | 0 |
 | `prepare_song` | Validate and save a song brief | 0 |
-| `start_song` | Start a prepared recording | 1 |
+| `start_song` | Start a prepared song | 1 |
 | `get_song_job` | Check progress and get the finished link | 0 |
 | `list_songs` | List your private songs | 0 |
 | `get_song` | Read song details and optionally lyrics | 0 |
+| `write_text` | Write lyrics, song titles or names with the free generators | 0 (daily writing allowance) |
+| `create_checkout_link` | Open a Stripe checkout for a plan or song pack the user chose (not offered in ChatGPT) | 0 |
 
-Prepare a song first and confirm its cost before starting generation. A free account has one song in total across the website and connected clients. Subscriptions and song packs share the same wallet and limits. See [pricing](https://wordsintomusic.com/pricing/).
+Prepare a song first and confirm its cost before starting it. Starting the same preparation again returns the same job, so a retry never spends a second credit. Song credits come from monthly or yearly plans and one-time song packs, which share one wallet. See [pricing](https://wordsintomusic.com/pricing/).
 
-Supported song languages are English, Spanish, German, French, and Brazilian Portuguese. Request vocals or an instrumental, with a target duration of 60 to 180 seconds. Accepted jobs continue after you close the chat. Find finished recordings in your private library.
+Supported song languages are English, Spanish, German, French, Brazilian Portuguese, Italian, Dutch, Polish, Swedish, Japanese and Korean. Songs usually take a few minutes and keep generating after you close the chat. Finished songs are in your private library.
 
 ## OAuth
 
 The service supports OAuth discovery, dynamic client registration, PKCE, and refresh tokens. Scopes are `account:read`, `songs:read`, and `songs:create`. Review permissions before granting access. Disconnect clients in Words into Music Settings to revoke future tool calls.
 
-The service does not issue manual personal access tokens. Unauthenticated requests to the MCP endpoint receive HTTP 401. This is expected.
+The MCP endpoint uses OAuth only. Unauthenticated requests to it receive HTTP 401, which is expected. For scripts, a REST API with API keys created in Settings is documented at [wordsintomusic.com/developers](https://wordsintomusic.com/developers/).
 
 ## Support
 
